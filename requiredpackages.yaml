@@ -1,0 +1,41 @@
+packages:
+
+  
+  - package: dmenu
+    description: "shows you how much time you have spent trying to exit vim, d stands for damn good menu"
+
+  - package: i3-gapps
+    description: "allows you to make your system unusable for other people, bonus you look like total nerd"
+
+  - package: gvim
+    description: "makes you never exit it, Control+q does not work, HELP I CANT EXIT IT EITHER IM STUCK HELP"
+
+  - package: termite
+    description: "eats your wood and gives you bunch of text, like books, but you cant smell it"
+
+  - package: feh
+    description: "shows that cute photos of your cats behind every (work)space (imagine doing real work with i3 haha)"
+
+  - package: dunst
+    description: "allows you to be bothered in other apps by the annoying apps elsewhere"
+
+  - package: compton
+    description: "makes your termites and their habitat transparent by composing classical music"
+
+  - package: chromium
+    description: "eats RAM, thank God you can download more (Control+Shift+n is new anonymous window wink wink)"
+
+  - package: mc
+    description: "its not minecraft, it is like Total Comander but uglier and without the need to press 3 everytime, works best at Midight"
+
+  - package: htop
+    description: "shows undone tasks for today, like vacuuming the rug etc., h stands for hilarious, dont know about top"
+
+  - package: alsa-utils
+    description: "makes your mothers ears bleed from your atrocious music taste, also someone dropped the S from salsa"
+
+  - package: ttf-inconsolata
+    description: "uses those super nerdy 1 and 0 and transforms them into something like primitive emojis some historians can understand a bit"
+
+  - package: neofetch
+    description: "shows how cool your distribution logo looks made from that primitive emojis, way cooler that ye olde screenfetch"
