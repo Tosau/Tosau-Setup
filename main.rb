@@ -10,7 +10,9 @@ def EFI_install
   puts "[SWAP]	        /dev/sdX3	Linux swap	            More than 512 MiB"
 
   gets
-  exec ("cfdisk; clear; fdisk -l; ruby toscana.rb --efi")
+  system "cfdisk"
+  system "clear"
+  system "toscana.rb --efi"
 end
 
 def BIOS_install
@@ -19,14 +21,21 @@ def BIOS_install
   puts "None	        /dev/sdX1	  BIOS boot partition	1 MiB"
   puts "/	            /dev/sdX2	  Linux	              Remainder of the device"
   puts "[SWAP]	      /dev/sdX3	  Linux swap	        More than 512 MiB"
+
+  gets
+  system "cfdisk"
+  system "clear"
+  system "toscana.rb --bios"
 end
 
+##START POINT##
 puts "Initializing setup scripts"
 puts "You\'ve done it! Congratulations"
 puts "Now it\'s our problem if something isn\'t working"
 puts "Make yourself some coffee, we\'ll be done soon enough (I hope)"
 puts "If you need more information how to use Tosau, check our wiki!"
 
+#Update the system clock
 system "timedatectl set-ntp true"
 
 if system "ping -c 5 google.com"
@@ -37,6 +46,7 @@ else
   exit
 end
 
+#Check if in EFI mode or BIOS mode and tells user how to partition the disk
 if system "ls /sys/firmware/efi/efivars"
   puts "System runs in EFI mode, do you want to use it? [yes or nyae?]:"
   if ["yes", "y"].include? gets.downcase.chomp
