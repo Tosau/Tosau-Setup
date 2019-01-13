@@ -1,0 +1,40 @@
+{
+    //Comments are handled before parsing
+
+    //Only implemented filesystem setting
+    "partitions" :
+    [
+        { 
+            "type" : "efiboot",
+            "size" : "512M",
+            "position" : "beginning"
+        },
+        {
+            "type" : "Ext4",
+            "size" : "fill"
+        },
+        {
+            "type" : "swap",
+            "size" : "8G",
+            "position" : "end"
+        }
+    ],
+
+    //not implemented yet
+    "hostname" : "deusexmachina",
+
+    //check if not different naming scheme
+    //not implemented yet
+    "languages" : 
+    [
+        "en_US",
+        "cs_CZ"
+    ],
+    //only for i3
+    //not implemented yet
+    "keyboard_layouts":
+    [
+        "cz -variant ,qwerty",
+        "us"
+    ]
+}
